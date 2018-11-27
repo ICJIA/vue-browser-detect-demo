@@ -1,3 +1,19 @@
 <template>
-  <div class="about"><h1>This is an about page</h1></div>
+  <div>{{test.title}}</div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    this.test = require("../../public/api/test.json");
+  },
+  data() {
+    return {
+      test: {}
+    };
+  }
+};
+</script>
+
+<style scoped>
+</style>
