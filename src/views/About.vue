@@ -1,16 +1,12 @@
 <template>
-  <div>{{test.title}}</div>
+  <div>About page</div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    this.test = require("../../public/api/test.json");
-  },
+  mounted() {},
   data() {
-    return {
-      test: {}
-    };
+    return {};
   }
 };
 </script>
