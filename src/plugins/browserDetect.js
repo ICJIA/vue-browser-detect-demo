@@ -1,4 +1,4 @@
-export default {
+const VueBrowserDetect = {
   install: Vue => {
     let ua = window.navigator.userAgent;
     let browserObj = {};
@@ -17,7 +17,6 @@ export default {
     // ua =
     //   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586";
 
-    // browserObj.ua = ua;
     // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
     browserObj.isOpera =
       !!window.opera || navigator.userAgent.indexOf(" OPR/") >= 0;
@@ -42,9 +41,12 @@ export default {
       (browserObj.isChrome || browserObj.isOpera) && !!window.CSS;
 
     browserObj.meta = browserSpecs();
-    browserObj.meta.userAgent = ua;
+    browserObj.meta.ua = ua;
 
     function browserSpecs() {
+      /**
+       * https://stackoverflow.com/questions/5916900/how-can-you-detect-the-version-of-a-browser
+       */
       var tem,
         M =
           ua.match(
@@ -67,3 +69,9 @@ export default {
     Vue.prototype.$browserDetect = browserObj;
   }
 };
+
+export default VueBrowserDetect;
+
+// if (typeof window !== "undefined" && window.Vue) {
+//   window.Vue.use(VueBrowserDetect);
+// }
