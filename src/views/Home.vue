@@ -2,10 +2,10 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <br />
-    <github></github>
+    
     {{ $browserDetect }}
 
-    <div>Github</div>
+   <Github></Github>
   </div>
 </template>
 

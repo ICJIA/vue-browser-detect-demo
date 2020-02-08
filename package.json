@@ -10,7 +10,7 @@
   "dependencies": {
     "eslint-plugin-prettier": "^3.1.0",
     "vue": "^2.6.10",
-    "vue-browser-detect-plugin": "^0.1.5",
+    "vue-browser-detect-plugin": "^0.1.8",
     "vue-router": "^3.0.7",
     "vuex": "^3.1.1"
   },
