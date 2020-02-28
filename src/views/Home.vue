@@ -1,23 +1,15 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <br />
-    <github></github>
-    {{ $browserDetect }}
-
-    <div>Github</div>
+    <div class="row center-xs">
+      <div
+        class="col-xs-12
+               "
+      >
+        <img alt="Vue logo" src="../assets/logo.png" />
+        <div class="box" style="margin-top: 30px">
+          <tree-view :data="$browserDetect"></tree-view>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
-
-<script>
-// @ is an alias to /src
-import Github from '@/components/Github'
-export default {
-  name: "home",
-  components: {
-    Github
-  }
-};
-</script>
-
-

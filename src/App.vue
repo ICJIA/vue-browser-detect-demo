@@ -1,15 +1,26 @@
 <template>
   <div id="app">
+    <github></github>
     <router-view />
   </div>
 </template>
-
+<script>
+// @ is an alias to /src
+import Github from "@/components/Github";
+export default {
+  name: "home",
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    Github
+  }
+};
+</script>
 <style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
 }
 #nav {
